@@ -1,0 +1,53 @@
+<!--- JAVASCRIPT POP QUIX FOR CODING STUDENTS--->
+<!---CREATED BY COURTNEY CASCI-->
+
+<!DOCTYPE html>
+
+<!--JAVASCRIPT POP QUIZ-->
+<!--CREATED BY COURTNEY CASCI-->
+
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>JavaScript Pop Quiz</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!--FAVICON-->
+        <link rel="icon" type="image/png" sizes="32X32" href="https://p.kindpng.com/picc/s/311-3114720_transparent-space-shuttle-png-png-download.png">
+    </head>
+    <body>
+        <!--HEADLINE WITH QUICKLINKS-->
+        <header class="header" id="header">
+            <div>
+                <a class="highScores" href="HighScores.html">View High Scores</a>
+            </div>
+            <div class="timeleft" >
+                <a> Time Remaining: <span id="countDown">180 seconds</span></a>
+            </div>
+        </header>
+
+        <!--STARTING PAGE-->
+        <main>
+            <section class="titleIntro">
+                <div id="titleBlock">
+                    JavaScript Pop Quiz
+                </div>
+                <div id="introText" class="intructions">
+                    Do your best and try to answer call the JavaScript questions within the time limit. Any incorrect answer will reduce your remaining time by 10 seconds! Good luck!
+                </div>
+            </section>
+
+            <section class="startButton"class="buttons">
+                <button id="startQuiz" class="pinkGreen">Start Quiz!</button>
+            </section>
+            <section class="quizAnswers">
+                <article class="answers">
+                    <input type="radio" id="answer1" name="answerSelect"/><h3 class="pinkGreen" id="answer1"></h3>
+                </article>
+                
+            </section>
+        </main>
+    </body>
+</html>
