@@ -1,41 +1,34 @@
 // SECTION VARIABLES
+console.log("Starting Quiz....");
+var startButtonQuiz = document.querySelector("#start-quiz-button");
+var startQuizScreen = document.querySelector("start-quiz-screen");
+var quizQuestionsScreen = document.querySelector("quiz-questions-screen");
+var questions = [
+  {
+    question: "First Question in the Quiz?",
+    choice: ["First Choice", "Second Choice", "Third Choice"],
+    answer: "First Choice",
+  },
+  {
+    question: "Second Question in the Quiz?",
+    choice: ["First Choice", "Second Choice", "Third Choice"],
+    answer: "Third Choice",
+  },
+  {
+    question: "Third Question in the Quiz?",
+    choice: ["First Choice", "Second Choice", "Third Choice"],
+    answer: "Second Choice",
+  },
+];
 
-
-// ITEM VARIABLES
-var timerEl = document.getElementById("countdown");
-var titleBlockVar = document.getElementById("titleBlock");
-var startButton = document.querySelector("#star");
-var answer1Button = document.querySelector("#answer1");
-var answer2Button = document.querySelector("#answer3");
-var answer3Button = document.querySelector("#answer4");
-var submitButton = document.getElementById("submitScore");
-instroSection = document.getElementById("rightWrong");
-var i = 0;
-
-// 
-
-//-----------Code:startUp------------
-
-//-----------Code:questions------------
 function displayQuestion() {
-  startButton.style.display = "none";
+  console.log('display question please');
+  questionTextElement.textContent = 'Some Text'
 }
 
-//-----------Code:endScreen------------
+startQuizButtonElement.addEventListener("click", function () {
+  console.log("start quiz");
 
-//---------define functions---------
-
-//-------overall function to initiate-------
-startButton.addEventListener("click", displayQuestion);
-
-//-----------Get references from HTML------------
-var xxx = document.querySelector("#yyy");
-
-// check localStorage for high score, if it's not there, use 0
-var highScore = localStorage.getItem("highscore");
-if (highScore === null) {
-  highScore = 0;
-}
-
-//---------------Add event listener-----------
-startButton.addEventListener("click", countdown);
+  startQuizScreen.classList.add("hidden");
+  quizQuestionsScreen.classList.remove("hidden");
+});
