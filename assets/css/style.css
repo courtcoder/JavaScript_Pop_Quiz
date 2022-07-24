@@ -1,3 +1,229 @@
-.hidden {
-  display: none;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/*variables*/
+/* :root {} */
+
+/*general selectors*/
+
+.purplePink {
+  border-radius: 5px;
+  justify-content: left;
+  color: white;
+  background-color: #23CE6B;
+  padding: 0 25px;
+  margin: 10px;
+  min-width: 25vw;
+}
+
+.purplePinkBtn {
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(39, 32, 1);
+  padding: 0 25px;
+  margin: 10px 15vw;
+  text-align: center;
+}
+
+.purplePinkBtn:hover {
+  background-color: #A846A0;
+}
+
+/*button area spacing*/
+.submitBtn,
+.submitScoreBtnArea,
+.goBackArea,
+.clearBtn {
+  padding-top: 25px;
+  margin-left: 15vw;
+}
+
+/*-------------header area----------------*/
+
+/*--headline with quick Links. used every page but high scores*/
+header {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: var(--secondary-color);
+  z-index: 9999;
+}
+
+/*HighScores link in header*/
+.leftHeader {
+  color: rgb(122, 69, 134);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.leftHeader:hover {
+  color: rgb(47, 11, 140);
+  background: #50514F;
+  text-shadow: 0 0 10px;
+}
+
+/*time in header*/
+.rightHeader {
+  color: black;
+}
+
+/*---------all of main sections-----------*/
+main {
+  width: 60vw;
+  margin-left: 20vw;
+}
+
+#titleBlock {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+.summary {
+  font-size: 16px;
+  padding: 20px 10vw;
+}
+
+/*-------------questions Page----------------*/
+
+/*answer boxes*/
+.answers {
+  display: flex;
+  /* margin-left: 30vw; */
+  align-items: center;
+}
+
+/*overall answer area{} */
+
+/*radio buttons to pick correct answer*/
+.radios {
+  margin-right: 15px;
+}
+
+/*-------------Final Page----------------*/
+
+/*user enters initials at the end*/
+.initials {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.initials::before {
+  color: lightslategray;
+  font-style: italic;
+}
+
+.initials::after {
+  color: black;
+}
+
+.endArea {
+  width: 60vw;
+  margin-right: 20vw;
+  display: block;
+}
+
+#scoreTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*-------------high scores Page----------------*/
+
+/*all score boxes*/
+.scores {
+  text-align: left;
+  justify-content: center;
+  width: 30vw;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 15vw;
+}
+
+/*current player's results*/
+#scoreYours {
+  margin-top: 25px;
+  padding: 2px 20px;
+  width: 40vw;
+  color: black;
+  font-weight: bolder;
+  background-color: lightgray;
+}
+
+/*appended list of all past results in local storage*/
+.pastScores {
+  color: rgb(101, 86, 86);
+  font-weight: bolder;
+  width: 30vw;
+  list-style: none;
+  font-style: italic bold;
+  padding: 2px 20px;
+  margin: 8px;
+  background-color: lightgray;
+}
+
+/*----------footer- gives messages during game--------*/
+footer {
+  padding: 20px;
+  width: 60vw;
+  margin-left: 20vw;
+  text-align: center;
+  font-size: 30px;
+  color: grey;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  main {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  #titleBlock {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .summary {
+    font-size: 12px;
+    padding: 20px 0;
+  }
+
+  .header a {
+    font-size: 14px;
+    padding: 15px;
+    padding-left: 30px;
+  }
+
+  .initials,
+  #scoreTitle {
+    font-size: 14px;
+  }
+
+  .answerArea {
+    font-size: 10px;
+  }
+
+  .scores {
+    margin-left: 15vw;
+    width: 60vw;
+  }
+
+  .initialsArea,
+  #endSummary {
+    display: block;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/* @media screen and (max-width: 550px) {
+} */
